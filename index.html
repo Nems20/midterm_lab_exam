@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>Dezven portfolio website template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+	<!--- Bootstrap 5 CSS link --->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--- Font Awesom CSS link --->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<!--- Live Jquery URL--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--- Bootstrap 5 Jquery URL--->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--- Owl Carousel Js And CSS For Testimonial Slider--->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css">
+    <!--- style.css, where we will write our custom css--->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+html, body {
+	font-size: 14px;
+	font-family Lato;
+}
+a {
+	text-decoration:none;
+}
+.navbar{
+	background:#eee0e0;
+	
+}
+.header-fixed {
+	box-shadow: 0 12px 15px rgba(140, 152, 164, 0.1);
+	background: #e9e3e3;
+}
+.navbar-brand {
+	color: #292929;
+	font-weight:700;
+	font-size: 28px;
+}
+.navbar-nav {
+	width: 100%;
+	justify-content: flex-end;
+}
+.navbar-nav li {
+	padding-left:25px;
+}
+.navbar-nav li a {
+    color: rgb(0 0 0 / 81%);
+    font-size: 16px;
+    font-weight: 600;
+}
+.navbar-toggler {
+	box-shadow: none!important;
+	border: 1px solid #f170b1;
+	padding: 6px 10px;
+}
+@media only screen and (max-width:768px) {
+.navbar-nav li {
+ width: 100%;
+ float: left;
+ padding: 10px 0px 10px 10px;
+ border-bottom: 1px solid #ebebeb;
+}
+}
+.main-section {
+	padding-top:50px;
+	padding-bottom:100px;
+}
+.banner-left h1 {
+	margin-top:30%;
+}
+.banner-left h1 {
+	font-size: 20px;
+	font-weight: 900;
+}
+.banner-left h2 {
+	color: #292929;
+	font-size: 60px;
+	font-weight: 700;
+}
+.banner-left h3 {
+	color: #292929;
+	font-weight: 600;
+	font-size: 28px;
+	margin-bottom: 30px;
+}
+.banner-left p {
+	font-size: 16px;
+	line-height: 30px;
+	color: #607D8B;
+}
+.head-bottom {
+	height: 3px;
+	width:140px;
+	margin-bottom: 9px;
+	margin-top: 0px;
+	display: inline-block;
+	background-color:#f170b1;
+}
+.banner-btn {
+	margin-top: 40px;
+}
+.banner-btn button {
+	padding: 14px 40px;
+	border: none;
+	border-radius: 8px;
+	color: #fff;
+	background-color: #f170b1;
+	font-size:16px;
+}
+.banner-top {
+	padding: 40px;
+	position: relative;
+	margin-top:80px;
+}
+.banner-img {
+	border-radius: 50% 50% 0% 50%;
+	border: 15px solid #292929 !important;
+	position: relative;
+	z-index: 99;
+	overflow: hidden;
+}
+.banner-img img {
+	width: 70%;
+}
+
+.banner-top:before {
+	content: "";
+	background-image: url(../images/dots.png);
+	position: absolute;
+	top: 0;
+	left: -40px;
+	right: 0;
+	bottom: 0;
+	background-position: left;
+	background-size: cover;
+	animation-name: rotate;
+	animation-duration:80s;
+	animation-iteration-count: infinite;
+}
+@keyframes rotate {
+ from {
+transform: rotate(-360deg);
+}
+to {
+	transform: rotate(360deg);
+}
+}
+.banner-top:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	width: 200vw;
+	border: 20px solid #f170b1;
+	border-radius: 310px;
+	background: #eee0e0;
+}
+.typing {
+	position: relative;
+	width:fit-content;
+	padding-right:20px;
+}
+.typing::after {
+ content: "|";
+ position: absolute;
+ right: 0;
+ width: 100%;
+ color: #f170b1;
+ background: #fff;
+ animation: typing 6s steps(22) infinite, caret 1s infinite;
+}
+@-webkit-keyframes typing {
+ to {
+ width: 0;
+}
+}
+@keyframes typing {
+ to {
+ width: 0;
+}
+}
+@-webkit-keyframes caret {
+ 50% {
+ color: transparent;
+}
+}
+@keyframes caret {
+ 50% {
+ color: transparent;
+}
+}
+
+@media only screen and (max-width:768px) {
+.banner-left h1 {
+ margin-top:80px;
+ font-size: 18px;
+ font-weight: 600;
+}
+.banner-left h2 {
+ font-size:40px;
+ margin: 0px;
+}
+.banner-left h3 {
+ font-size: 22px;
+}
+.banner-left .head-bottom {
+ height: 2px;
+ width: 90px;
+}
+}
+.bg-grey {
+	background-color: #f7f6ff;
+}
+.heading {
+	text-align: center;
+	width: 100%;
+	float: left;
+	padding-bottom:20px;
+}
+.heading h5 {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #292929;
+	font-size: 7vw;
+	color: transparent;
+	font-weight: 600;
+	letter-spacing: 0.8rem;
+	opacity: 0.05;
+	pointer-events: none;
+	margin: 0px;
+	padding: 0px;
+}
+.heading h2 {
+	font-weight: 600!important;
+	color: #292929;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	bottom:70px;
+}
+.heading-border {
+	height: 4px;
+	width:40px;
+	margin-bottom:10px;
+	margin-top: 0px;
+	display: inline-block;
+	background-color:#f170b1;
+}
+@media only screen and (max-width:768px) {
+.heading h2 {
+ bottom: 10px;
+ font-size: 18px;
+}
+.heading-border {
+ height:2px;
+ width: 20px;
+ margin-bottom:6px;
+ margin-top: 0px;
+}
+}
+
+.about-img img {
+	width: 60%;
+}
+.about-info h2 {
+	border-left: 2px solid #f170b1;
+	padding-left: 10px;
+	font-size: 18px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+.about-info h3 {
+	font-weight: 500;
+	color: #292929;
+	font-size: 18px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.about-info p {
+	padding-left: 10px;
+	color: #555a64;
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 15px;
+}
+.about-info .about-tool {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 28px;
+	margin-bottom: 32px;
+}
+.about-info .about-tool span {
+	font-size: 13px;
+	border: 1px solid rgba(41, 41, 41, 0.1);
+	padding: 6px 16px;
+	border-radius: 40px;
+	margin: 0 5px 5px 0;
+	background: #eee0e0;;
+}
+.about-info .about-work span {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: #f170b1;
+	color: #eee0e0;;
+	vertical-align: top;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 12px;
+	float: left;
+}
+.about-info .about-work h4 {
+	margin-left: 5px;
+	float: left;
+	margin-top: 8px;
+	font-weight: 100;
+	font-size: 18px;
+}
+.service {
+	border: 1px solid #eee0e0;
+	border-radius: 7px;
+	box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+	margin-top: 88px;
+	padding-bottom: 30px;
+}
+.service-hex {
+	margin-top: 30px;
+	width: 104px;
+	height: 60px;
+	background-color:#f170b1;
+	position: relative;
+	top: -55px;
+	left: 40%;
+}
+.service-hex:before {
+	content: " ";
+	width: 0;
+	height: 0;
+	border-bottom: 30px solid #f170b1;
+	border-left: 52px solid transparent;
+	border-right: 52px solid transparent;
+	position: absolute;
+	top: -30px;
+}
+.service-hex:after {
+	content: "";
+	width: 0;
+	position: absolute;
+	bottom: -30px;
+	border-top: 30px solid #f170b1;
+	border-left: 52px solid transparent;
+	border-right: 52px solid transparent;
+}
+.service-hex i {
+	position: absolute;
+	color: #eee0e0;;
+	font-size: 40px;
+	text-align: center;
+	left: 0px;
+	right: 0px;
+	top: 10px;
+}
+.service-inner {
+	text-align: center;
+	padding: 5px 44px;
+	font-size: 17px;
+}
+.service-inner h3 {
+	font-size: 23px;
+	
+}
+.service-inner p {
+	font-size:16px;
+	line-height:28px;
+	font-family 'Lato';
+}
+@media only screen and (max-width:768px) {
+.service-hex {
+ left:38%;
+}
+}
+.experience {
+	padding: 20px 30px;
+	background: #eee0e0;
+	box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+	border: 1px solid #e2e8f0;
+	border-radius: 10px;
+	margin-bottom: 20px;
+}
+.experience h5 {
+	background: #f170b1;
+	display: inline-block;
+	font-size: 13px;
+	padding: 8px 14px;
+	border-radius: 20px;
+	color: #fff;
+}
+.portfolio-section {
+	border: 1px solid #eee0e0;
+	border-radius: 10px;
+	box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+	margin-top: 30px;
+}
+.portfolio-section img {
+	width: 100%;
+}
+.portfolio-section h3 {
+	margin-top: 20px;
+}
+.portfolio-section span {
+	border: 1px solid #eee0e0;
+	padding: 5px 10px;
+	border-radius: 13px;
+	float:left;
+	margin:5px 5px 0px 0px;
+}
+.portfolio-info {
+	padding: 20px;
+	width: 100%;
+	float: left;
+}
+@media only screen and (max-width:768px) {
+.portfolio-section h3 {
+ font-size: 16px;
+}
+}
+.contact-info {
+	width: 100%;
+	float: left;
+	background-color: #eee0e0;
+	padding: 10px 30px 10px 30px;
+	border-radius: 8px;
+	border: 1px solid #e2e8f0;
+	box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+	margin-bottom:20px;
+}
+.contact-left h3 {
+	border-left: 2px solid #f170b1;
+	padding-left: 10px;
+	color: #565656;
+	font-size: 16px;
+	font-weight: 600;
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+}
+.contact-left p {
+	padding-left: 10px;
+	margin-bottom: 15px;
+}
+.contact-left a {
+	padding-left: 10px;
+	margin-bottom:7px;
+	width: 100%;
+	float: left;
+	text-decoration:none;
+	color:black;
+}
+.contact-info ul {
+	width: 100%;
+	float: left;
+	margin-top: 20px;
+	list-style: none;
+	padding-left: 0px;
+}
+.contact-info ul li {
+	float: left;
+	padding-left: 10px;
+}
+.contact-info ul li i {
+	font-size: 22px;
+	color: black;
+}
+.contact-form {
+	border: 1px solid #eee0e0;
+	padding: 30px;
+	border-radius: 8px;
+	background-color: #eee0e0;
+	box-shadow: 0 0.375rem 1.5rem 0 rgba(140, 152, 164, 0.125);
+}
+.contact-form h3 {
+	border-left: 2px solid #f170b1;
+	padding-left: 10px;
+}
+.contact-form .form-control {
+	padding: 8px;
+}
+@media only screen and (max-width:768px) {
+.contact-left p {
+ padding-left: 10px;
+ margin-top: 11px;
+}
+}
+
+
+</style>
+<body>
+	<nav class="navbar navbar-expand-lg fixed-top" id="navbar_top">
+		<div class="container"> <a class="navbar-brand" href="#">Nems<span></span></a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse-toggle" aria-expanded="false"><span class="navbar-toggler-icon"></span></button>
+		  <div class="collapse navbar-collapse justify-content-end" id="navbar-collapse-toggle">
+			<ul class="navbar-nav ml-auto">
+			  <li><a href="#home"><span>Home</span></a></li>
+			  <li><a href="#about"><span>About Me</span></a></li>
+			  <li><a href="#services"><span>Services</span></a></li>
+			  <li><a href="#work"><span>Experience</span></a></li>
+			  <li><a href="#work"><span>Portfolio</span></a></li>
+			  <li><a href="#contactus"><span>Contact Me</span></a></li>
+			</ul>
+		  </div>
+		</div>
+	</nav>
+
+	<div class="container-fluid main-section overflow-hidden">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-6 col-12">
+			  <div class="banner-left">
+				<h1>Thank You for Visiting</h1>
+				<h2>Nems Choco</h2>
+				<span class="head-bottom"></span>
+				<h3 class="typing">Front-end Developer </h3>
+				<p> Hello! I am your passionate front-end developer from the Philippines. </p>
+				<div class="banner-btn">
+				  <button>Contact Me</button>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-6 col-12">
+			  <div class="banner-top">
+				<div class="banner-img"> <img src="mee.png"> </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="container-fluid bg-grey">
+		<div class="container">
+		  <div class="heading">
+			<h5>ABOUT</h5>
+			<h2><span class="heading-border"></span> ABOUT ME<span class="heading-border"></span></h2>
+		  </div>
+		  <div class="row">
+			<div class="col-lg-5 col-md-5 col-12">
+			  <div class="about-img"> <img src="mee.png"> </div>
+			</div>
+			<div class="col-lg-7 col-md-7 col-12">
+			  <div class="about-info">
+				<h2>About Me</h2>
+				<h3>Hello, my name is Nems Choco and I'm a designer,editor and front-end developer</h3>
+
+				<h2>Design Tools</h2>
+				<div class="about-tool"> 
+				<span>Adobe Xd</span> 
+				<span>Photoshop </span> 
+				</div>
+				<h2>Technologies and Skills</h2>
+				<div class="about-tool"> 
+				<span>HTML</span> 
+				<span>CSS</span> 
+				<span>MYSQL</span> 
+				<span>React</span> 
+				<span>JavaScript</span> 
+				<span>Graphic Design</span> 
+				<span>Art Design</span> 
+				</div>
+				<h2>Work Process</h2>
+				<div class="row about-work">
+				  <div class="col-md-3 col-12 mt-2"> <span>#01</span>
+					<h4>Research</h4>
+				  </div>
+				  <div class="col-md-3 col-12 mt-2"> <span>#02</span>
+					<h4>Design</h4>
+				  </div>
+				  <div class="col-md-3 col-12 mt-2"> <span>#03</span>
+					<h4>Codeing</h4>
+				  </div>
+
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+	  <div class="container-fluid main-section">
+		<div class="container">
+		  <div class="heading">
+			<h5>SERVICES</h5>
+			<h2><span class="heading-border"></span> MY SERVICES<span class="heading-border"></span></h2>
+		  </div>
+		  <div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+			  <div class="service">
+				<div class="service-hex"><i class="fa fa-briefcase"></i></div>
+				<div class="service-inner">
+				  <h3>Unique design</h3>
+				  <p></p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+			  <div  class="service">
+				<div class="service-hex"><i class="fa fa-cube"></i></div>
+				<div class="service-inner">
+				  <h3>Different Layout</h3>
+				  <p>.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+			  <div  class="service">
+				<div class="service-hex"><i class="fa fa-database"></i></div>
+				<div class="service-inner">
+				  <h3>Make it Database</h3>
+				  <p>.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+			  <div class="service">
+				<div class="service-hex"><i class="fa fa-laptop"></i></div>
+				<div class="service-inner">
+				  <h3>Responsiveness</h3>
+				  
+			  </div>
+			  
+		
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="container-fluid main-section bg-grey">
+		<div class="container">
+		  <div class="heading">
+			<h5>EXPERIENCE</h5>
+			<h2><span class="heading-border"></span> MY EXPERIENCE<span class="heading-border"></span></h2>
+		  </div>
+		  <div class="row">
+			<div class="col-lg-4 col-md-4 col-12">
+			  <div class="experience">
+				<div class=" col-12">
+				  <h5>Sep, 2016 – May, 2017</h5>
+				</div>
+				<div class=" col-12 ex-left">
+				  <h4>Junior Designer</h4>
+				  <p></p>
+				  <span></span> </div>
+			  </div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-12">
+			  <div class="experience">
+				<div class=" col-12">
+				  <h5>Sep, 2017 – May, 2022</h5>
+				</div>
+				<div class=" col-12 ex-left">
+				  <h4>Systems Analyst / Web Developer</h4>
+				  <p>.</p>
+				  <span></span> </div>
+			  </div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-12">
+			  <div class="experience">
+				<div class="col-12">
+				  <h5>Sep, 2023 – May, 2025</h5>
+				</div>
+				<div class="col-12 ex-left">
+				  <h4>Full Stack Developer</h4>
+				  <p></p>
+				  <span></span> </div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="container-fluid main-section">
+		<div class="container">
+		  <div class="heading">
+			<h5>PORTFOLIO</h5>
+			<h2><span class="heading-border"></span> MY PORTFOLIO<span class="heading-border"></span></h2>
+		  </div>
+		  <div class="row mt-5">
+			<div class="col-lg-6 col-md-12 col-12">
+			  <div class="portfolio-section">
+				<div class="row">
+				  <div class="col-md-7 col-12">  </div>
+				  <div class="col-md-5 col-12">
+					<a href="https://nems20.github.io/JavaScript-Operators-Operands-Order-Precedence/" target="_blank">
+					  <div class="portfolio-info">
+						<h3>Grade Average</h3>
+					  </div>
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-12">
+			  <div class="portfolio-section">
+				<div class="row">
+				  <div class="col-md-7 col-12">  </div>
+				  <div class="col-md-5 col-12">
+					<a href=" https://nems20.github.io/first-ex-of-js/" target="_blank">
+					  <div class="portfolio-info">
+						<h3>Traffic Light</h3>
+					  </div>
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-12 mt-4">
+			  <div class="portfolio-section">
+				<div class="row">
+				  <div class="col-md-7 col-12"> </div>
+				  <div class="col-md-5 col-12">
+					<a href=" https://nems20.github.io/Responsive-Grid-Photo-Gallery-/" target="_blank">
+					  <div class="portfolio-info">
+						<h3>Photo Gallery</h3>
+					  </div>
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-12 mt-4">
+			  <div class="portfolio-section">
+				<div class="row"> 
+				  <div class="col-md-7 col-12"> </div>
+				  <div class="col-md-5 col-12">
+					<a href="https://nems20.github.io/.jumbotron/" target="_blank">
+					  <div class="portfolio-info">
+						<h3>Places to Go</h3>
+					  </div>
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	  <div class="container-fluid main-section">
+		<div class="container">
+		  <div class="heading">
+			<h5>CONTACT</h5>
+			<h2><span class="heading-border"></span> CONTACT ME<span class="heading-border"></span></h2>
+		  </div>
+		  <div class="row">
+			<div class="col-md-4">
+			  <div class="contact-info">
+				<div class="contact-left">
+				  <h3>Email</h3>
+				  <a href="mailto:info@dezven.com">melynbaldo715@gmail.com</a> </div>
+				<div class="contact-left">
+				  <h3>Phone</h3>
+				  <p>0965 047 3647p>
+				</div>
+				<ul>
+				  <li><a href="https://www.facebook.com/dezven/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+				  <li><a href="https://www.instagram.com/dezvengroup/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+				  <li><a href="https://www.youtube.com/@dezvengroup" target="_blank"><i class="fa fa-youtube-square"></i></a></li>
+				  <li><a href="https://twitter.com/Dezven" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+				  
+				  <li><a href="https://www.linkedin.com/company/dezvengroup/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+				  
+				</ul>
+			  </div>
+			</div>
+			<div class="col-md-8 res-mt">
+			  <div class="contact-form">
+				<h3>Get In Touch</h3>
+				<div class="row mt-4">
+				  <div class="col-md-6 col-12 mt-4">
+					<input type="text" course-listplaceholder="Your Name *" class="form-control">
+				  </div>
+				  <div class="col-md-6 col-12 mt-4">
+					<input type="text" course-listplaceholder="Your Email *" class="form-control">
+				  </div>
+				  <div class="col-md-12 col-12 mt-4">
+					<input type="text" course-listplaceholder="Your Subject *" class="form-control">
+				  </div>
+				  <div class="col-md-12 col-12 mt-4">
+					<textarea placeholder="Your Message *" class="form-control"> </textarea>
+				  </div>
+				  <div class="col-md-12 col-12  mt-4">
+					<button class="btn btn-danger btn-lg">Contact Us</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  
+
+	  
+
+
+
+	  
+	  
